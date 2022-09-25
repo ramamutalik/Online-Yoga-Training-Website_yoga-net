@@ -1,0 +1,675 @@
+.hero-image-container {
+  background: url(/img/landing-top1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.yogaa {
+  color: #f04657;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px lightblue;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.demo {
+  border: none;
+  outline: none;
+  height: 48px;
+  background: #56ee1f;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s ease;
+  padding: 15px;
+}
+.demo:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  color: #f04657;
+  box-shadow: 0 0 20px #f04657;
+}
+
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.trailer.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trailer video {
+  max-width: 900px;
+  outline: none;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  filter: invert(1);
+  width: 30px;
+  min-width: 5px;
+}
+
+/* Hero Section */
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container .hero-content {
+  position: absolute;
+}
+.hero-container > div {
+  position: relative;
+}
+.hero-container .hero-img {
+  width: 100%;
+
+  height: 40%;
+  object-fit: cover;
+}
+
+.hero-image-container::before {
+  content: "\A";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content strong {
+  font-size: 32px;
+  color: #e86c00;
+}
+
+.hero-content button {
+  margin-top: 30px;
+}
+
+.hero-content .yoga-content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Why Yoga Section */
+.why-yoga h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.why-yoga h2,
+.procedure-container h2 {
+  text-align: center;
+}
+
+.why-yoga .procedure,
+.procedure-container .procedure,
+.testimonials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  grid-gap: 20px;
+  gap: 60px;
+  margin-top: 20px;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.animationSpan {
+  color: rgb(10, 184, 10);
+}
+
+.why-yoga .procedure {
+  gap: 80px;
+}
+.why-yoga .procedure > div,
+.procedure-container .procedure > div,
+.testimonials > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 300px;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.member-opinion:hover {
+  transform: scale(1.2);
+  background-color: #69ce90;
+}
+
+/* testimonials */
+.testimonials > div {
+  max-width: 360px;
+  background-color: #9ad7b1;
+  padding: 20px;
+}
+.why-yoga .procedure img {
+  width: 100%;
+}
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 20px;
+  align-items: center;
+}
+
+.testimonials-container h2 {
+  margin-bottom: 30px;
+}
+
+.testimonials-container > div {
+  justify-content: center;
+}
+
+.procedure-container .procedure h1,
+.procedure-container .procedure p {
+  padding: 10px 30px;
+}
+
+.procedure-container,
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 20px;
+  align-items: center;
+}
+
+.testimonials-container > div {
+  justify-content: center;
+}
+
+.procedure-container .procedure > div > div {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.procedure-container .procedure img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*How It Works Section*/
+/* start */
+.procedureBody {
+  background-color: #c1e5cf;
+  padding-top: 50px;
+}
+.heading-how {
+  text-align: center;
+}
+
+.howBody {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.howProcedure {
+  position: relative;
+  width: 1120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 35px;
+}
+
+.howProcedure .procedure-card {
+  position: relative;
+  max-width: 330px;
+  height: 250px;
+  background: #9ad7b1;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+}
+
+.howProcedure .procedure-card .imageSec {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.howProcedure .procedure-card:hover {
+  height: 420px;
+}
+
+.howProcedure .procedure-card .imageSec img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.howProcedure .procedure-card .procedure-content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.howProcedure .procedure-card:hover .procedure-content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+/* end */
+
+/* Live Class Section */
+.live-class-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  grid-gap: 20px;
+  gap: 20px;
+}
+.live-class-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.live-class-images img {
+  margin-bottom: 10px;
+  max-width: 360px;
+  border-radius: 16px;
+}
+.live-class-section h2,
+.live-class-section p {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Offerings Section */
+.offerings-container {
+  background-color: #c1e5cf;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.offerings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 60px;
+  max-width: 960px;
+  grid-gap: 60px;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+.offering-icon-container,
+.testimonials-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+  background-color: #f04657;
+}
+.offerings > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+.offerings > div > h5,
+.offerings > div p {
+  text-align: center;
+  margin-top: 20px;
+}
+/* end */
+
+/* Testimonials Section */
+.testimonials-header {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.testimonials-header button {
+  margin-top: 0px;
+  min-width: 260px;
+}
+
+.testimonials-icon-container {
+  background-color: none;
+}
+
+.testimonials > div {
+  text-align: left;
+  height: 290px;
+}
+
+.testimonials > div > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  grid-gap: 10px;
+  gap: 10px;
+}
+.cta-bottom {
+  position: relative;
+  height: 18em;
+  background-image: url(../yoga-style/assets/hero-bottom.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+.cta-bottom_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  /* background: #c1e5cf; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-top: 5em; */
+  padding-bottom: 5em;
+}
+
+.cta-bottom_description {
+  font-family: "Rubik";
+  font-size: 20px;
+  line-height: 28px;
+  padding: 0 2em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+/*.cta-bottom_button {
+    margin-top: 2em;
+  }*/
+
+.cta_button {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  height: 48px;
+  border: 2px solid #052c08;
+  color: #052c08;
+  font-family: "montserrat", sans-serif;
+  cursor: pointer;
+  padding: 8px 40px;
+  margin-top: 2em;
+  transition: color 0.4s linear;
+  position: relative;
+}
+
+.cta_button:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+.cta_button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #052c08;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.cta_button::before {
+  transform: scaleX(0);
+}
+
+.cta_button:hover::before {
+  transform: scaleX(1);
+}
+
+.bt {
+  background: none;
+  font-size: 20px;
+  font-weight: 400;
+  height: 48px;
+  border: 2px solid #052c08;
+  color: #052c08;
+  font-family: "montserrat", sans-serif;
+  cursor: pointer;
+  padding: 8px 40px;
+  transition: color 0.4s linear;
+  position: relative;
+}
+
+.bt:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+.bt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #052c08;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.bt::before {
+  transform: scaleX(0);
+}
+
+.bt:hover::before {
+  transform: scaleX(1);
+}
+
+/* end */
+
+/* Batch Yoga Section */
+
+.why-yoga-2 {
+  display: flex;
+  justify-content: center;
+  background-color: #c1e5cf;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+.why-yoga-2 img {
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Yoga Journey section */
+
+.why-yoga-3 > div {
+  position: relative;
+}
+
+.why-yoga-3 img {
+  width: 100%;
+}
+
+.why-yoga-3 .content {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 0px;
+  width: 100%;
+  padding: 20px;
+}
+
+.button-topp {
+  display: block;
+  margin-top: 60px;
+}
+
+.button-bottom {
+  display: none;
+}
+
+.content-container h2 {
+  margin-bottom: 20px;
+}
+
+/*responsive making*/
+
+@media only screen and (max-width: 768px) {
+  .hero-container .hero-content {
+    position: relative;
+    top: 20px;
+    padding: 10px;
+  }
+  .hero-content p,
+  h1 {
+    color: #222222;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  .live-class-section {
+    flex-direction: column;
+  }
+  .live-class-images img {
+    width: 100%;
+  }
+  .why-yoga-2 {
+    flex-direction: column;
+  }
+  .button-top {
+    display: none;
+  }
+  .button-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .testimonials > div {
+    height: auto;
+  }
+  .live-class-section h2,
+  .live-class-section p {
+    text-align: center;
+  }
+  .why-yoga-2 p {
+    text-align: center;
+  }
+  header {
+    height: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .hero-container .hero-img {
+    height: 310px;
+  }
+  .hero-image-container::before {
+    opacity: 0;
+  }
+}

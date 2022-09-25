@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="/css/onlineClass.css" />
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li>Tutorials</li>
+  <li>Online Classes</li>
+</ul>
+
+<section class="detail">
+  <section class="bod1">
+    <h1>COURSE DETAILS</h1>
+    <div class="wrapper">
+      <div class="card1">
+        <img src="img/Aarambha.gif" height="100%" alt="" />
+        <div class="descriptions">
+          <h2>AARAMBHA</h2>
+          <p>
+            If you have a problem and there is nowhere else to turn, the
+            mysterious and elusive Robert McCall will deliver the vigilante
+            justice you seek. This time, however, McCall's past cuts especially
+            close to home when thugs kill Susan Plummer -- his best friend and
+            former colleague. Now out for revenge, McCall must take on a crew of
+            highly trained assassins who'll stop at nothing to destroy him.
+          </p>
+          <a href="#reg">
+            <button>Register for course</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img src="img/nithya.gif" height="100%" alt="" />
+        <div class="descriptions">
+          <h2>NITHYA</h2>
+          <p>
+            If you have a problem and there is nowhere else to turn, the
+            mysterious and elusive Robert McCall will deliver the vigilante
+            justice you seek. This time, however, McCall's past cuts especially
+            close to home when thugs kill Susan Plummer -- his best friend and
+            former colleague. Now out for revenge, McCall must take on a crew of
+            highly trained assassins who'll stop at nothing to destroy him.
+          </p>
+          <a href="#reg">
+            <button>Register for course</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img src="img/Yogi.gif" alt="" />
+        <div class="descriptions">
+          <h2>YOGI</h2>
+          <p>
+            If you have a problem and there is nowhere else to turn, the
+            mysterious and elusive Robert McCall will deliver the vigilante
+            justice you seek. This time, however, McCall's past cuts especially
+            close to home when thugs kill Susan Plummer -- his best friend and
+            former colleague. Now out for revenge, McCall must take on a crew of
+            highly trained assassins who'll stop at nothing to destroy him.
+          </p>
+          <a href="#reg">
+            <button>Register for course</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reg" class="bod">
+    <h1 class="main">Do you want to start the journey with us?</h1>
+    <div class="contain">
+      <div class="cont">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">Surkhet, NZ1</div>
+            <div class="text-two">Birendranagar 11</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+0098 1111 5647</div>
+            <div class="text-two">+0096 2222 5678</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">abc@gmail.com</div>
+            <div class="text-two">abcd@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Register for the course</div>
+          <p>Fill in the details below to register for a course</p>
+          <form onsubmit="sendEmail(); reset(); return false;">
+            <div class="input-box">
+              <input type="text" id="name" placeholder="Enter your name" />
+            </div>
+            <div class="input-box">
+              <input type="email" id="email" placeholder="Enter your email" />
+            </div>
+            <div class="input-box">
+              <input type="text" id="phone" placeholder="Enter your ph no." />
+            </div>
+            <div class="dropdown">
+              <select id="course">
+                <option value="course">Choose the course</option>
+                <option value="yogi">YOGI</option>
+                <option value="nithya">NITHYA</option>
+                <option value="aarambha">AARAMBHA</option>
+              </select>
+            </div>
+            <div class="button">
+              <input type="submit" class="subN" value="Submit Now" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  function sendEmail() {
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: process.env.CONTACT_EMAIL,
+      Password: process.env.CONTACT_PW,
+      To: process.env.CONTACT_EMAIL,
+      From: document.getElementById("email").value,
+      Subject: "New Enquiry Form Entry",
+      Body:
+        "Name: " +
+        document.getElementById("name").value +
+        "<br> Email: " +
+        document.getElementById("email").value +
+        "<br> Phone No: " +
+        document.getElementById("phone").value +
+        "<br> Course: " +
+        document.getElementById("course").value,
+    }).then((message) => alert(message, "Message sent successfully"));
+  }
+</script>

@@ -1,0 +1,215 @@
+<link rel="stylesheet" href="/css/home.css">
+<section class="hero-container">
+
+  <div class="hero-image-container">
+    <div class="trailer">
+      <video src="/videos/pexels-koolshooters-6245970.mp4" controls="true"></video>
+      <img src="/img/close.png" class="close" alt="">
+    </div>
+  </div>
+  <div class="hero-content yoga-content">
+    <% if(user) { %>
+      <h4 style="color: #56ee1f;">Welcome <%= user.name %>
+      </h4>
+      <% } %>
+        <h1>Laziness bidi,<br><span class="yogaa"> Yoga </span> madi!</h1>
+
+        <button class="demo">Watch a demo! <i class="fa fa-play" aria-hidden="true"></i></button>
+        </a>
+  </div>
+</section>
+
+<section class="why-yoga">
+  <div class="animationClass">
+    <h2>Why choose <span class="animationSpan">YOGA<span style="color: #f04657;">@NET?</span></span></h2>
+  </div>
+  <div class="procedure">
+    <div>
+      <img src="/img/yoga-group-classes-inside-gym 1.png" alt="Yoga group classes inside gym" loading="lazy">
+      <h4>Cheaper than coffee!</h4>
+      <p>
+        Why pay hundreds at a yoga studio when you can achieve better results at home.
+      </p>
+    </div>
+    <div>
+      <img src="/img/agenda-showing-digital-tablet 1.png" alt="agenda showing digital tablet" loading="lazy">
+      <h4>Do yoga when you want</h4>
+      <p>
+        Choose from 50+ live classes happening every week that fit your schedule.
+      </p>
+    </div>
+    <div>
+      <img src="/img/yoga-teacher-teaching-class 1.png" alt="Yoga teacher teaching class" loading="lazy">
+      <h4>Not your typical Youtube video</h4>
+      <p>
+        Our personal instructors are really there with you, to guide you in your practice.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="procedureBody">
+  <h2 style="text-align: center;">How it works</h2>
+  <section class="howBody">
+
+
+    
+    <div class="howProcedure">
+      <div class="procedure-card">
+        <div class="imageSec">
+          <img src="/img/img01.jpg" alt="Booking trial icon" loading="lazy" />
+        </div>
+        <div class="procedure-content">
+          <p><strong>Your Time, Your Space</strong></p>
+          <p>Without the need to arrive at a studio at any certain time,
+            online yoga allows you to select the time of the day that suits
+            you to practice..</p>
+
+        </div>
+      </div>
+      <div class="procedure-card">
+        <div class="imageSec">
+          <img src="/img/img02.jpg" alt="Mat icon" loading="lazy" />
+        </div>
+        <div class="procedure-content">
+          <p><strong>A Plethora of Choice</strong></p>
+          <p>
+            Let’s face it, we love choice.Online yoga allows you to browse and choose the class that you feel like
+            diving into.
+            <!--You have the ability to select from different teachers, various styles, guest lectures, and special workshops.-->
+          </p>
+        </div>
+      </div>
+      <div class="procedure-card">
+        <div class="imageSec">
+          <img src="/img/img03.jpg" alt="Yoga instructor icon" loading="lazy" />
+        </div>
+        <div class="procedure-content">
+          <p><strong>Try it Live!!</strong></p>
+          <p>
+            Enjoy personalized guidance!!Combine all the benefits of an online class with everything you love about a
+            live studio class.
+            <!--Have a teacher right there practicing along side you and experience the energy and dynamic nature that comes with a live class.-->
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<section class="live-class-section">
+  <div>
+    <h2>Attend any class</h2>
+    <p>Select from 50+ live classes every week. We don't charge you for attending different classes than your
+      regular batch</p>
+    <div class="button-top">
+      <a href="/calender">
+        <button class="bt">See live class schedule</button>
+      </a>
+    </div>
+  </div>
+  <div class="live-class-images">
+    <img src="/img/live-class-sample.png" alt="Sample schedule for live yoga classes" loading="lazy">
+  </div>
+  <div class="button-bottom ">
+    <a href="/calender">
+      <button class="bt">View schedule</button>
+    </a>
+  </div>
+</section>
+
+
+<section class="offerings-container">
+  <h2>Do what works best for you</h2>
+  <div class="offerings">
+    <div>
+      <div class="offering-icon-container">
+        <img src="/img/video-camera.png" alt="Daily classes live" height="60" width="60" loading="lazy">
+      </div>
+      <h5>Daily classes - LIVE!</h5>
+      <p>
+        Join live classes when you wake up or relax after a long day.Yoga always
+        fits your mental and physical health.
+
+      </p>
+    </div>
+    <div>
+      <div class="offering-icon-container">
+        <img src="/img/video-play-icon.png" alt="Access class videos anytime" height="60" width="60" loading="lazy">
+      </div>
+      <h5>Access Anytime!</h5>
+      <p>
+        Can’t make time for the live session? Don’t worry, our instructors guide you
+        safely through recorded courses and videos.
+      </p>
+    </div>
+    <div>
+      <div class="offering-icon-container">
+        <img src="/img/user-group.png" alt="Live workshops and Consultations" height="60" width="60" loading="lazy">
+      </div>
+      <h5>Live Workshops and Beginner Consultation</h5>
+      <p>
+        As a valued member you get free access to monthly workshops and other premium events.Consultation is important
+        to
+        achive the perfect end result.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="testimonials-container">
+  <h2>See what our members have to say</h2>
+  <div class="testimonials">
+    <% if(testObjs!='' ) { %>
+      <% testObjs.forEach(function(testObj,index) { %>
+        <div class="member-opinion">
+          <div>
+            <img class="testimonials-icon-container" src="/img/<%- testObj.image %> " alt="<%-testObj.image %>"
+              loading="lazy">
+            <div>
+              <h6> <strong>
+                  <%- testObj.name %>
+                </strong> </h6>
+              <p>
+                <%- testObj.address %>
+              </p>
+            </div>
+          </div>
+          <p>
+            <%- testObj.text %>
+          </p>
+        </div>
+        <% } )%>
+          <% } %>
+
+  </div>
+  <a href="/contact">
+    <button class="bt button-topp">Contact Us</button>
+  </a>
+</section>
+
+<section class="why-yoga-2">
+  <div class="content-container">
+    <h2>Small batches, for individual attention</h2>
+    <p>
+      We run small batches of <strong>4-8 people</strong> so that everyone gets <strong>individual attention</strong> of
+      the trainer
+    </p>
+  </div>
+  <div class="image-container">
+    <img src="/img/batch (2).jpg" alt="Small yoga batch" loading="lazy">
+  </div>
+</section>
+
+<section class="cta-bottom">
+  <div class="cta-bottom_overlay">
+    <h2 class="title">Start your journey with Yoga@Net</h2>
+    <p class="cta-bottom_description">Join a caring community and practice yoga on your own terms</p>
+    <a href="/onlineClass">
+      <button class="cta_button cta-bottom_button">
+        Know more
+      </button>
+    </a>
+  </div>
+</section>

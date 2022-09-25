@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= typeof title !='undefined' ? title : 'Yoga.Net' %>
+  </title>
+
+  <link rel="shortcut icon" href="/img/logo-.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
+    integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <script src="https://use.fontawesome.com/926a81f582.js"></script>
+  <script src="https://kit.fontawesome.com/e7dde6565a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div>
+    <nav>
+      <div class="navbar">
+        <span class="fabars grab"><i class="fa-sharp fa-solid fa-bars"></i></span>
+        <div class="logo">
+          <a href="/" class="logo"><img src="/img/logo-.ico" alt="logo" loading="lazy" style="width: 2em;"></a>
+          <h1 class="logo-head"><span style="color: rgb(18, 83, 6);">YOGA</span><span>@NET</span></h1>
+        </div>
+
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name"><span style="color: rgb(18, 83, 6);">YOGA</span><span
+                style="color: #f04657;">@NET</span></span>
+            <span class="faxmark grab"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+          </div>
+          <ul class="links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/aboutUs">About Us</a></li>
+            <li><a href="#">Tutorials </a>
+              <i class="fa-solid fa-caret-down arrow tutor-arrow"></i>
+              <ul class="tutor-menu dropdown-menu">
+                <li><a href="/onlineClass">Yogi</a></li>
+                <li><a href="/onlineClass">Nithya</a></li>
+                <li><a href="/onlineClass">Aarambha</a></li>
+                <% if(user) { %>
+                  <% if(user.role=='customer' ) { %>
+                    <li><a href="/calender">calender</a></li>
+                    <% } %>
+                      <% } %>
+              </ul>
+            </li>
+
+            <% if(user) { %>
+              <% if(user.role=='admin' ) { %>
+                <li><a href="/calender">Edit Calender</a></li>
+                <% } %>
+                  <li>
+                    <form action="/logout" method="POST" id="logout">
+                      <a onclick="document.getElementById('logout').submit()" href="#">Logout</a>
+                    </form>
+                  </li>
+                  <% } else { %>
+
+                    <li><a href="javascript:void(0)">Register </a>
+                      <i class="fa-solid fa-caret-down arrow reg-arrow"></i>
+                      <ul class="reg-menu dropdown-menu">
+                        <li><a href="/signup">Signup</a></li>
+                        <li><a href="/login">Login</a></li>
+                      </ul>
+                    </li>
+                    <% } %>
+                      <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <main>
+      <%- body -%>
+        <script src="/js/home.js"></script>
+    </main>
+
+
+
+
+
+    <!--FOOTER SECTION-->
+
+    <div class="footer-container">
+      <footer class="footer-distributed">
+        <div class="footer-left">
+          <h3>YOGA<span>@NET</span></h3>
+          <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">About</a>
+            |
+            <a href="#">Contact</a>
+            |
+            <a href="#">Course</a>
+          </p>
+
+          <p class="footer-company-name">Copyright &copy 2022 <strong>YOGA@NET</strong>
+            All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+          <div>
+            <i class="fa-sharp fa-solid fa-location-dot"></i>
+            <p><span>Bangalore</span>Karnataka</p>
+
+          </div>
+
+          <div>
+            <i class="fa-solid fa-phone"></i>
+            <p>+91 85**6**238</p>
+          </div>
+
+          <div>
+            <i class="fa-regular fa-envelope"></i>
+            <p><a href="#">abcd@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About the company</span>
+            <strong>Yoga@net</strong> is a website where u can find the oppurtunity to make yourself yoga-fit.
+            Here, you get a choice to make between the various courses in accordance to your comfort level.
+          </p>
+
+          <div class="footer-icons">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+  </div>
+</body>
+<script src="/js/index.js"></script>
+
+</html>

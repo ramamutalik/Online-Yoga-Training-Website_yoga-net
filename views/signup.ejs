@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/css/signup.css">
+<ul class="breadcrumb">
+   <li><a href="/">Home</a></li>
+   <li><a>Register</a></li>
+   <li>Sign Up</li>
+</ul>
+<section class="log-in">
+   <div class="container2">
+      <!-- Left section of signup form -->
+      <div class="section1">
+         <h5 class="log-pad">Welcome to Yoga@NET</h5>
+         <form action="/signup" method="POST">
+            <% if(messages.error) { %>
+               <span style="color:red ;">
+                  <%= messages.error %>
+               </span>
+               <% } %>
+                  <div>
+                     <p class="element1"><label for="userName">User Name</label></p>
+                     <input name="name" value="<%= messages.name %>" type="text" id="userName" autocomplete="off">
+                  </div>
+                  <div>
+                     <p class="element"><label for="email">Email Address</label></p>
+                     <input type="email" value="<%messages.email %>" id="email" name="email" autocomplete="off">
+                  </div>
+                  <div>
+                     <p class="element"><label for="password">Password</label></p>
+                     <input name="password" type="password" id="password">
+                  </div>
+                  <button type="submit" id="btn1">Sign Up Now</button>
+                  <p>Already a member? <a class="rute" href="/login">Log in</a></p>
+         </form>
+      </div>
+      <!-- Right section of the form containing image -->
+      <div class="section2">
+         <img src="/img/signup.png" alt="Music Image">
+      </div>
+   </div>
+</section>

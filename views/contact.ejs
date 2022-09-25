@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/css/contact.css">
+<ul class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li>Contact Us</li>
+</ul>
+<section class="contact-main">
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Surkhet, NZ1</div>
+          <div class="text-two">Birendranagar 11</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+0098 1111 5647</div>
+          <div class="text-two">+0096 2222 5678</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">abc@gmail.com</div>
+          <div class="text-two">abcd@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>If you want to know more about us or any types of quries related to our tutorial, you can send us message
+          from here. It's our pleasure to help you.</p>
+
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <!-- <form> -->
+          <div class="input-box">
+            <input type="text" id="name" placeholder="Enter your name">
+          </div>
+          <div class="input-box">
+            <input type="email" id="email" placeholder="Enter your email">
+          </div>
+          <div class="input-box">
+            <input type="text" id="phone" placeholder="Enter your phone no.">
+          </div>
+          <div class="input-box message-box">
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+          </div>
+          <div class="button">
+            <input type="submit" value="Send Now">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: process.env.CONTACT_EMAIL,
+        Password: process.env.CONTACT_PW,
+        To: process.env.CONTACT_EMAIL,
+        From: document.getElementById("email").value,
+        Subject: "New Enquiry Form Entry",
+        Body: "Name: " + document.getElementById("name").value
+          + "<br> Email: " + document.getElementById("email").value
+          + "<br> Phone No: " + document.getElementById("phone").value
+          + "<br> Message: " + document.getElementById("message").value
+      }).then(
+        message => alert(message, "Message sent successfully")
+      );
+    }
+  </script>
+</section>

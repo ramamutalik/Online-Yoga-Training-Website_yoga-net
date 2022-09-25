@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/login.css">
+<ul class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a>Register</a></li>
+    <li>Log In</li>
+</ul>
+<section class="log-in">
+    <div class="container1">
+        <div class="section1">
+            <h5 class="log-pad">Welcome to Yoga@NET</h5>
+            <form action="/login" method="POST">
+                <% if(messages.err) { %>
+                    <span style="color:red ;">
+                        <%= messages.err %>
+                    </span>
+                    <% } %>
+                        <% if(messages.error) { %>
+                            <span style="color:#d1d158;">
+                                <%= messages.error %>
+                            </span>
+                            <% } %>
+                                <div>
+                                    <p class="element"><label for="email">Email</label></p>
+                                    <input type="email" id="email" name="email">
+                                </div>
+                                <div>
+                                    <p class="element"><label for="userNmae">Password</label></p>
+                                    <input type="password" name="password" id="password">
+                                </div>
+                                <button type="submit" id="btn">Log In</button>
+                                <p>Not a registered user? <a class="rute" href="/signup">Register</a></p>
+            </form>
+        </div>
+        <div class="section2">
+            <img src="/img/login1.png" alt="Music Image">
+        </div>
+    </div>
+</section>

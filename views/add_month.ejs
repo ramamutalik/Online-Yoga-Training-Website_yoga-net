@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="/css/calender.css">
+<!-- Header -->
+<header id="header">
+    <nav>
+        <div class="container">
+            <div class="text-center">
+                <a href="/" class="nav-brand text-dark">Calender of Events</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- /Header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/calender"><i class="fas fa-angle-double-left"></i> All months</a>
+            </div>
+        </div>
+        <% if(messages.mes) { %>
+            <p style="color:green ;">
+                <%= messages.mes %>
+            </p>
+            <% } %>
+                <div class="form-title text-center">
+                    <h2 class="text-dark">New Month</h2>
+                    <span class="text-light">Use the below form to create a new account</span>
+                </div>
+
+                <!-- add user form -->
+                <!-- form handling -->
+                <form action="/calender/api/month" method="POST" id="add_user">
+                    <div class="new_user">
+                        <div class="form-group">
+                            <label for="month" class="text-light">Month</label>
+                            <input type="hidden" name="id" value="">
+                            <input type="text" name="month" value="" placeholder="Jan">
+                        </div>
+                        <div class="form-group">
+                            <label for="year" class="text-light">Year</label>
+                            <input type="text" name="year" value="" placeholder="2022">
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="text-light">Date</label>
+                            <input type="text" name="date" value="" placeholder="DD-MM">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="day" class="text-light">Day</label>
+                            <input type="text" name="day" value="" placeholder="Mon">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timing" class="text-light">Timimg</label>
+                            <input type="text" name="timing" value="" placeholder="1am">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn text-dark update">Save</button>
+                        </div>
+
+                    </div>
+                </form>
+
+    </div>
+</main>
+<!-- /Main Site -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+<script src="/js/calender.js"></script>

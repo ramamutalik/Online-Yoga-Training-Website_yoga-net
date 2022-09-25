@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="/css/calender.css">
+<ul class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li>Tutorials</li>
+    <li>Calender Of Events</li>
+</ul>
+<header id="header">
+    <nav>
+        <div class="container">
+            <div class="text-center">
+                <a href="/" class="nav-brand text-dark">Calender of Events</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<main id="site-main">
+    <div class="container">
+        <% if(user) { %>
+            <% if(user.role=='admin' ) { %>
+                <div class="box-nav d-flex justify-between">
+                    <a href="/calender/addMonth" class="border-shadow">
+                        <span class="text-gradient">New Month <i class="fas fa-user"></i></span>
+                    </a>
+                </div>
+                <% } %>
+                    <% } %>
+
+                        <!-- form handling -->
+                        <form action="/calender" method="POST">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Month</th>
+                                        <th>Year</th>
+                                        <th>Date</th>
+                                        <th>Day</th>
+                                        <th>Timing</th>
+                                        <% if(user) { %>
+                                            <% if(user.role=='admin' ) { %>
+                                                <th>Action</th>
+                                                <% } %>
+                                                    <% } %>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for(var i=0; i < cal.length; i++) { %>
+                                        <tr>
+                                            <td>
+                                                <%= i + 1 %>
+                                            </td>
+                                            <td>
+                                                <%= cal[i].month %>
+                                            </td>
+                                            <td>
+                                                <%= cal[i].year %>
+                                            </td>
+                                            <td>
+                                                <%= cal[i].date %>
+                                            </td>
+                                            <td>
+                                                <%= cal[i].day %>
+                                            </td>
+                                            <td>
+                                                <%= cal[i].timing %>
+                                            </td>
+                                            <% if(user) { %>
+                                                <% if(user.role=='admin' ) { %>
+                                                    <td>
+                                                        <a href="/calender/updateMonth?id=<%= cal[i]._id%>"
+                                                            class="btn border-shadow update">
+                                                            <span class="text-gradient"><i
+                                                                    class="fas fa-pencil-alt"></i></span>
+                                                        </a>
+                                                        <a class="btn border-shadow delete" data-id=<%=cal[i]._id %> >
+                                                            <span class="text-gradient"><i
+                                                                    class="fas fa-times"></i></span>
+                                                        </a>
+                                                    </td>
+                                                    <% } %>
+                                                        <% } %>
+                                        </tr>
+                                        <% } %>
+                                </tbody>
+                            </table>
+                        </form>
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+<script src="/js/calender.js"></script>

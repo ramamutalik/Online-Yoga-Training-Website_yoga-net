@@ -1,0 +1,128 @@
+.log-in {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: rgb(216, 241, 222);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.log-pad {
+  padding-bottom: 20px;
+}
+.container1 {
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  max-width: 43rem;
+  height: 450px;
+  background-color: #fbfbfb;
+  display: flex;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.section1 {
+  width: 75%;
+  padding: 27px;
+}
+.rute {
+  color: #f04657;
+}
+.element {
+  padding-bottom: 20px;
+}
+.section2 {
+  height: 100%;
+  width: 50%;
+}
+.section2 > img {
+  width: 112%;
+  height: 100%;
+  margin: 0px 0px 0px 0px;
+  border-radius: inherit;
+}
+h5 {
+  margin-top: -12px;
+}
+label {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgb(48, 48, 48);
+}
+input {
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  background-color: #fbfbfb;
+  position: relative;
+  top: -10px;
+  padding: 5px;
+}
+input:focus {
+  outline: none !important;
+  border-bottom: 1px solid rgb(35, 219, 158);
+  font-size: 14px;
+  font-weight: bold;
+}
+#password:focus {
+  color: rgb(35, 219, 158);
+  font-size: 16px;
+  font-weight: bold;
+}
+#btn {
+  border: none;
+  background-color: rgb(46, 216, 160);
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  width: 150px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+p {
+  font-size: small;
+}
+.line {
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  margin-top: 50px;
+}
+.socialIcons {
+  display: flex;
+  margin-top: 5px;
+}
+
+.socialIcons h6 {
+  padding-top: 20px;
+}
+.icon {
+  margin: 10px 7px;
+  position: relative;
+  left: 30px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-size: 12px;
+  line-height: 25px;
+  cursor: pointer;
+}
+.fab {
+  position: relative;
+  left: 6px;
+}
+.fb > .fab {
+  position: relative;
+  left: 8px;
+}
+h6 {
+  position: relative;
+  top: -8px;
+  font-size: 12px;
+}
+.icon:hover,
+#btn:hover {
+  box-shadow: 0 0 25px rgba(8, 8, 8, 0.2);
+  background-color: rgb(35, 219, 158);
+}
