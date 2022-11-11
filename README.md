@@ -46,5 +46,7 @@ To deploy this project run
   npm start
 ```
 
+## Contact Email Needs to be used for demo purpose
 
 
+Demo mail id for sending messages in contact us : ` ramamutalikdesai16@gmail.com `
