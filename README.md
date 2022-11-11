@@ -3,11 +3,27 @@
 
 
 
+## Live Website 
+
+https://yogaatnet.onrender.com/
+
+## LogIn Credentials
+
+- Admin Login Credentials
+
+  `username`: `adminfix-it@gmail.com`
+  
+  `password`: `fix-it@2022`  
+
+- Demo User Credentials
+
+   `username` : `demo@gmail.com`
+   
+  `password`: `demo`
 
 ## Demo
 
 https://youtu.be/vWPOZY9LQd4
-
 
 ## Tech Stack
 
@@ -24,6 +40,10 @@ https://youtu.be/vWPOZY9LQd4
 - Tutorials page
 - Contact Us page
 
+## Contact Email Needs to be used for demo purpose
+
+
+Demo mail id for sending messages in contact us : ` ramamutalikdesai16@gmail.com `
 
 ## Environment Variables
 
@@ -46,7 +66,4 @@ To deploy this project run
   npm start
 ```
 
-## Contact Email Needs to be used for demo purpose
 
-
-Demo mail id for sending messages in contact us : ` ramamutalikdesai16@gmail.com `
