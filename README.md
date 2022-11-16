@@ -7,20 +7,6 @@
 
 https://yogaatnet.onrender.com/
 
-## LogIn Credentials
-
-- Admin Login Credentials
-
-  `username`: `adminfix-it@gmail.com`
-  
-  `password`: `fix-it@2022`  
-
-- Demo User Credentials
-
-   `username` : `demo@gmail.com`
-   
-  `password`: `demo`
-
 ## Demo
 
 https://youtu.be/vWPOZY9LQd4
